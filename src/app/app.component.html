@@ -1,6 +1,56 @@
 <h1>{{title}}</h1>
-<form>
-  Company Code:<input type="number">
-</form>
+<body>
+  <div>
+    <form>
+        Company Code:<input type="text" onkeypress="validate(event)" size="1" maxlength="3"> 
+        Division Code:<input type="text" onkeypress="validate(event)" size="1" maxlength="3">
+        Department Code:<input type="text" onkeypress="validate(event)" size="1" maxlength="3">
+        Invoice Origin:<input type="text" maxlength="2" size="1"> <br>
+        Invoice No:<input type="text" onkeypress="validate(event)" size="7" maxlength="10">
+        Invoice Date:<input type="date">
+        Invoice Status:<input type="text" maxlength="2" size="1"> <br>
+        Sales Type:<input type="text" onkeypress="validate(event)" size="1" maxlength="4">
+        Invoice Type:<input type="text" style="text-transform: uppercase;" maxlength="1" size="1"> 
+        Cutomer No:<input type="text" onkeypress="validate(event)" size="5" maxlength="8">
+        Name:<input type="text" maxlength="20" size="19"><br>
+        Reference:<input type="text" maxlength="65" size="64"><br>
+        Delivery Date:<input type="date">
+        Due Date:<input type="date">
+        Salesperson Code:<input type="text" onkeypress="validate(event)" size="1" maxlength="4"><br>
+        Postal Address 1:<input type="text" maxlength="30" size="29"><br>
+        Postal Address 2:<input type="text" maxlength="30" size="29"><br>
+        Postal Address 3:<input type="text" maxlength="30" size="29"><br>
+        Delivery No:<input type="text" onkeypress="validate(event)" size="1" maxlength="3">
+        Total Cost:<input type="text" onkeypress="validate(event)" size="29" maxlength="30">
+        Net Amount: <input type="text" onkeypress="validate(event)" size="19" maxlength="20"><br>
+        Date Created:<input type="date">
+        Created By:<input type="text" maxlength="8" size="7">
+        Date Modified:<input type="date">
+        Modified By:<input type="text" maxlength="8" size="7"><br>
+        Date Approved:<input type="date">
+        Approved By:<input type="text" maxlength="8" size="7">
+    </form>
+  </div>
+</body>
+
+<script>
+  function validate(evt) {
+  var theEvent = evt || window.event;
+
+  // Handle paste
+  if (theEvent.type === 'paste') {
+      key = event.clipboardData.getData('text/plain');
+  } else {
+  // Handle key press
+      var key = theEvent.keyCode || theEvent.which;
+      key = String.fromCharCode(key);
+  }
+  var regex = /[0-9]|\./;
+  if( !regex.test(key) ) {
+    theEvent.returnValue = false;
+    if(theEvent.preventDefault) theEvent.preventDefault();
+  }
+}
+</script>
   
 <router-outlet></router-outlet>

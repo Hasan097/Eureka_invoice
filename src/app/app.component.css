@@ -3,7 +3,30 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto 30px 200px 30px auto auto auto auto auto auto 30px 200px;
+  background-color: rgb(92, 92, 92);
+  border: 1px solid rgb(0, 0, 0);
+  padding: 10px;
+  height: 250px;
+  overflow-y: scroll;
+}
+ .grid-item {
+  background-color: rgb(59, 59, 59);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  font-size: 10px;
+  color: white;
+  font: arial;
+  text-align: center;
+}
 
-input[type=number]{
-    width: 80px;
-} 
+.item{
+  background-color: rgb(255, 255, 255);
+  border: 1px solid rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  font-size: 10px;
+  font: arial;
+  text-align: center;
+}

@@ -11,6 +11,7 @@ input::-webkit-inner-spin-button {
   padding: 10px;
   height: 250px;
   overflow-y: scroll;
+  clear: left;
 }
  .grid-item {
   background-color: rgb(59, 59, 59);
@@ -29,4 +30,22 @@ input::-webkit-inner-spin-button {
   font-size: 10px;
   font: arial;
   text-align: center;
+}
+
+label{
+  display: inline-block;
+  float: left;
+  width: 170px;
+  height: 25px;
+  text-align: right;
+}
+
+input {
+  display: inline-block;
+  float: left;
+}
+
+.space{
+  display: block;
+  clear: left;
 }

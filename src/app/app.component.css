@@ -43,9 +43,17 @@ label{
 input {
   display: inline-block;
   float: left;
+  height: 25px;
 }
 
 .space{
   display: block;
   clear: left;
+}
+
+.submit-button{
+  position: relative;
+  clear: right;
+  float: right;
+  right: 50px;
 }

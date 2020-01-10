@@ -1,56 +1,57 @@
 <h1>{{title}}</h1>
 <body>
   <div>
-    <form>
+    <form action="trasfer.php" method="POST">
         <div class="space">
-          <label>Company Code:</label><input type="text" onkeypress="validate(event)" size="1" value="100" maxlength="3"> 
-          <label>Division Code:</label><input type="text" onkeypress="validate(event)" size="1" value="021" maxlength="3">
-          <label>Department Code:</label><input type="text" onkeypress="validate(event)" size="1" value="008" maxlength="3">
-          <label>Origin:</label><input type="text" maxlength="2" value="CA" size="1">
+          <label>Company Code:</label><input type="text" name="compCode" onkeypress="validate(event)" size="1" value="100" maxlength="3"> 
+          <label>Division Code:</label><input type="text" name="divCode" onkeypress="validate(event)" size="1" value="021" maxlength="3">
+          <label>Department Code:</label><input type="text" name="depCode" onkeypress="validate(event)" size="1" value="008" maxlength="3">
+          <label>Origin:</label><input type="text" name="ori" maxlength="2" value="CA" size="1">
+          <label>Work House Code:</label><input type="text" name="whCode" maxlength="3" value="WH5" size="1">
+          <label>Location Code:</label><input type="text" name="locCode" maxlength="5" value="24252" size="2">
         </div>
         <div class="space">
-          <label>Invoice No:</label><input type="text" onkeypress="validate(event)" size="7" maxlength="10">
-          <label>Invoice Date:</label><input type="date">
-          <label>Status:</label><input type="text" maxlength="2" size="1">
+          <label>Invoice No:</label><input type="text" name="invoiceNo" onkeypress="validate(event)" size="7" maxlength="10">
+          <label>Invoice Date:</label><input type="date" name="invoiceDate">
+          <label>Status:</label><input type="text" name="status" maxlength="2" size="1">
         </div>
         <div class="space">
-          <label>Sales Type:</label><input type="text" onkeypress="validate(event)" size="1" maxlength="4">
-          <label>Invoice Type:</label><input type="text" style="text-transform: uppercase;" maxlength="1" size="1"> 
-          <label>Cutomer No:</label><input type="text" onkeypress="validate(event)" size="5" maxlength="8">
-          <label>Name:</label><input type="text" maxlength="20" size="19">
+          <label>Sales Type:</label><input type="text" name="salesType" onkeypress="validate(event)" size="1" maxlength="4">
+          <label>Invoice Type:</label><input type="text" name="invoiceType" style="text-transform: uppercase;" maxlength="1" size="1"> 
+          <label>Cutomer No:</label><input type="text" name="customerNo" onkeypress="validate(event)" size="5" maxlength="8">
+          <label>Name:</label><input type="text" name="name" maxlength="20" size="19">
         </div>
         <div class="space">
-          <label>Reference:</label><input type="text" maxlength="65" size="64">
+          <label>Reference:</label><input type="text" name="ref" maxlength="65" size="64">
         </div>
         <div class="space">
-          <label>Delivery Date:</label><input type="date">
-          <label>Due Date:</label><input type="date">
-          <label>Salesperson Code:</label><input type="text" onkeypress="validate(event)" size="1" maxlength="4">
+          <label>Delivery Date:</label><input type="date" name="deliDate">
+          <label>Due Date:</label><input type="date" name="dueDate">
+          <label>Salesperson Code:</label><input type="text" name="salesPersonCode" onkeypress="validate(event)" size="1" maxlength="4">
         </div>
         <div class="space">
-          <label>Postal Address:</label><input type="text" maxlength="30" size="29">
+          <label>Postal Address:</label><input type="text" name="addr" maxlength="30" size="29">
         </div>
         <div class="space">
-          <label>Delivery No:</label><input type="text" onkeypress="validate(event)" size="1" maxlength="3">
-          <label>Total Cost:</label><input type="text" onkeypress="validate(event)" size="29" maxlength="30">
-          <label>Net Amount:</label><input type="text" onkeypress="validate(event)" size="19" maxlength="20">
+          <label>Delivery No:</label><input type="text" name="deliNo" onkeypress="validate(event)" size="1" maxlength="3">
+          <label>Total Cost:</label><input type="text" name="totalCost" onkeypress="validate(event)" size="29" maxlength="30">
+          <label>Net Amount:</label><input type="text" name="netAmount" onkeypress="validate(event)" size="19" maxlength="20">
         </div>
         <div class="space">
-          <label>Date Created:</label><input id="day" type="date">
-          <label>Created By:</label><input type="text" maxlength="8" size="7">
-          <label>Date Modified:</label><input type="date">
-          <label>Modified By:</label><input type="text" maxlength="8" size="7">
+          <label>Date Created:</label><input type="date" id="day" name="dateCreated">
+          <label>Created By:</label><input type="text" name="creatBy" maxlength="8" size="7">
+          <label>Date Modified:</label><input type="date" name="dateMod">
+          <label>Modified By:</label><input type="text" name="modBy" maxlength="8" size="7">
         </div>
         <div class="space">
-          <label>Date Approved:</label><input type="date">
-          <label>Approved By:</label><input type="text" maxlength="8" size="7">
-        </div>
+          <label>Date Approved:</label><input type="date" name="dateAppr">
+          <label>Approved By:</label><input type="text" name="apprBy" maxlength="8" size="7">
+        </div><br><br>
+        <div class="submit-button">
+          <input type="submit">
+        </div><br><br>
     </form>
-  </div><br>
-
-  <div>
-    <app-submit-invoice></app-submit-invoice>
-  </div><br><br>
+  </div>
 
   <div class="grid-container">
     <div class="grid-item">LINE NO</div>
